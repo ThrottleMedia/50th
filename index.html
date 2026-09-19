@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy 50th Birthday Mom ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0b0909;
+    color:white;
+    font-family:'Montserrat', sans-serif;
+    overflow-x:hidden;
+}
+
+/* -------------------- FLOATING HEARTS -------------------- */
+
+.hearts{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:20;
+}
+
+.heart{
+    position:absolute;
+    bottom:-60px;
+    color:#e2b96f;
+    font-size:20px;
+    animation:rise 10s linear infinite;
+    opacity:0;
+}
+
+.heart:nth-child(1){left:8%;animation-delay:0s;}
+.heart:nth-child(2){left:23%;animation-delay:3s;}
+.heart:nth-child(3){left:42%;animation-delay:6s;}
+.heart:nth-child(4){left:61%;animation-delay:1.5s;}
+.heart:nth-child(5){left:78%;animation-delay:4s;}
+.heart:nth-child(6){left:91%;animation-delay:7s;}
+
+@keyframes rise{
+    0%{
+        transform:translateY(0) scale(.8) rotate(0);
+        opacity:0;
+    }
+
+    15%{
+        opacity:.7;
+    }
+
+    100%{
+        transform:translateY(-115vh) scale(1.4) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* -------------------- HERO -------------------- */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:relative;
+    padding:30px 20px;
+
+    background:
+        radial-gradient(circle at 50% 45%, #3c2927 0%, #211719 30%, #0b0909 72%);
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:75%;
+    height:75%;
+    border:1px solid rgba(226,185,111,.25);
+    border-radius:50%;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:900px;
+}
+
+.subtitle{
+    color:#e2b96f;
+    letter-spacing:7px;
+    text-transform:uppercase;
+    font-size:12px;
+    margin-bottom:30px;
+}
+
+.hero h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(150px,30vw,300px);
+    line-height:.65;
+    font-weight:400;
+    color:#f2d59d;
+    text-shadow:0 0 50px rgba(226,185,111,.15);
+}
+
+.hero h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(45px,8vw,85px);
+    font-weight:400;
+    margin-top:45px;
+}
+
+.hero p{
+    max-width:650px;
+    margin:25px auto 35px;
+    color:#d0c9c9;
+    line-height:1.9;
+    font-size:15px;
+}
+
+.button{
+    display:inline-block;
+    padding:14px 32px;
+    border:1px solid #e2b96f;
+    border-radius:50px;
+    color:#f2d59d;
+    text-decoration:none;
+    transition:.4s;
+    font-size:13px;
+    letter-spacing:1px;
+}
+
+.button:hover{
+    background:#e2b96f;
+    color:#171112;
+}
+
+/* -------------------- GENERAL -------------------- */
+
+section{
+    padding:110px 20px;
+}
+
+.container{
+    max-width:1050px;
+    margin:auto;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:65px;
+}
+
+.title span{
+    color:#e2b96f;
+    text-transform:uppercase;
+    letter-spacing:5px;
+    font-size:11px;
+}
+
+.title h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:58px;
+    font-weight:400;
+    margin-top:12px;
+}
+
+.title p{
+    max-width:650px;
+    margin:18px auto 0;
+    color:#999;
+    line-height:1.8;
+}
+
+/* -------------------- INTRO -------------------- */
+
+.intro{
+    background:#120f10;
+}
+
+.intro-box{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+}
+
+.intro-box .big-heart{
+    font-size:45px;
+    color:#e2b96f;
+    margin-bottom:30px;
+}
+
+.intro-box p{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(25px,4vw,38px);
+    line-height:1.6;
+    color:#eee;
+}
+
+.intro-box p strong{
+    color:#f2d59d;
+    font-weight:500;
+}
+
+/* -------------------- LETTER -------------------- */
+
+.letter-section{
+    background:#0b0909;
+}
+
+.letter{
+    max-width:850px;
+    margin:auto;
+    padding:60px 50px;
+    background:linear-gradient(145deg,#21191a,#120f10);
+    border:1px solid rgba(226,185,111,.25);
+    box-shadow:0 30px 80px rgba(0,0,0,.35);
+}
+
+.letter h3{
+    font-family:'Cormorant Garamond',serif;
+    color:#f2d59d;
+    font-size:38px;
+    margin-bottom:30px;
+}
+
+.letter p{
+    color:#d2cece;
+    font-size:15px;
+    line-height:2;
+    margin-bottom:23px;
+}
+
+.signature{
+    margin-top:40px;
+    text-align:right;
+    color:#e2b96f;
+    font-family:'Cormorant Garamond',serif;
+    font-size:28px;
+}
+
+/* -------------------- 50 -------------------- */
+
+.fifty{
+    text-align:center;
+    background:
+        radial-gradient(circle at center,#382524,#0c090a 70%);
+}
+
+.number{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(170px,32vw,340px);
+    line-height:.7;
+    color:#e2b96f;
+}
+
+.fifty h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:55px;
+    font-weight:400;
+    margin-top:50px;
+}
+
+.fifty p{
+    max-width:700px;
+    margin:25px auto;
+    color:#aaa;
+    line-height:1.9;
+}
+
+/* -------------------- WHY WE LOVE YOU -------------------- */
+
+.love-section{
+    background:#151011;
+}
+
+.love-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.love-card{
+    padding:40px 28px;
+    text-align:center;
+    border:1px solid rgba(226,185,111,.18);
+    background:#1b1516;
+    transition:.4s;
+}
+
+.love-card:hover{
+    transform:translateY(-8px);
+    border-color:#e2b96f;
+}
+
+.love-card .icon{
+    font-size:35px;
+    margin-bottom:20px;
+}
+
+.love-card h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:30px;
+    color:#f2d59d;
+    margin-bottom:15px;
+}
+
+.love-card p{
+    color:#aaa;
+    line-height:1.8;
+    font-size:14px;
+}
+
+/* -------------------- PHOTO SECTION -------------------- */
+
+.photos-section{
+    background:#0b0909;
+}
+
+.photos{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.photo{
+    height:300px;
+    overflow:hidden;
+    position:relative;
+    background:#181314;
+    border:1px solid rgba(226,185,111,.2);
+}
+
+.photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.6s;
+}
+
+.photo:hover img{
+    transform:scale(1.07);
+}
+
+.photo-placeholder{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#777;
+    padding:20px;
+}
+
+.photo-placeholder span{
+    display:block;
+    font-family:'Cormorant Garamond',serif;
+    font-size:27px;
+    color:#e2b96f;
+    margin-bottom:8px;
+}
+
+/* -------------------- FAMILY MESSAGE -------------------- */
+
+.family{
+    background:#151011;
+    text-align:center;
+}
+
+.family-box{
+    max-width:800px;
+    margin:auto;
+}
+
+.family-box h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:65px;
+    color:#f2d59d;
+    font-weight:400;
+}
+
+.family-box p{
+    color:#ccc;
+    line-height:2;
+    margin-top:25px;
+    font-size:16px;
+}
+
+.family-box .heart-line{
+    font-size:30px;
+    color:#e2b96f;
+    margin:35px 0;
+}
+
+/* -------------------- FINAL -------------------- */
+
+.final{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    background:
+        radial-gradient(circle at center,#422a29,#0a0809 70%);
+}
+
+.final-content{
+    max-width:850px;
+}
+
+.final-small{
+    color:#e2b96f;
+    text-transform:uppercase;
+    letter-spacing:5px;
+    font-size:12px;
+}
+
+.final h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(60px,10vw,110px);
+    line-height:1;
+    font-weight:400;
+    color:#f2d59d;
+    margin:25px 0;
+}
+
+.final p{
+    color:#d0cccc;
+    line-height:2;
+    max-width:650px;
+    margin:auto;
+}
+
+.final-love{
+    margin-top:45px;
+    font-family:'Cormorant Garamond',serif;
+    font-size:38px;
+    color:#e2b96f;
+}
+
+/* -------------------- FOOTER -------------------- */
+
+footer{
+    padding:35px 20px;
+    text-align:center;
+    background:#070606;
+    color:#666;
+    font-size:12px;
+}
+
+footer span{
+    color:#e2b96f;
+}
+
+/* -------------------- MOBILE -------------------- */
+
+@media(max-width:750px){
+
+    section{
+        padding:80px 18px;
+    }
+
+    .hero::before{
+        width:90%;
+        height:70%;
+    }
+
+    .title h2{
+        font-size:45px;
+    }
+
+    .letter{
+        padding:40px 25px;
+    }
+
+    .love-grid{
+        grid-template-columns:1fr;
+    }
+
+    .photos{
+        grid-template-columns:1fr;
+    }
+
+    .photo{
+        height:320px;
+    }
+
+    .family-box h2{
+        font-size:50px;
+    }
+}
+</style>
+</head>
+
+
+<body>
+
+<!-- FLOATING HEARTS -->
+
+<div class="hearts">
+    <div class="heart">♥</div>
+    <div class="heart">♡</div>
+    <div class="heart">♥</div>
+    <div class="heart">♡</div>
+    <div class="heart">♥</div>
+    <div class="heart">♡</div>
+</div>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="subtitle">
+            Celebrating a beautiful life
+        </div>
+
+        <h1>50</h1>
+
+        <h2>Happy Birthday, Mom</h2>
+
+        <p>
+            Today isn't just about celebrating your birthday.
+            It's about celebrating <strong>you</strong> —
+            the woman who loves us, supports us,
+            helps us and stands beside us through everything.
+        </p>
+
+        <a href="#message" class="button">
+            A Message From Us ↓
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro" id="message">
+
+    <div class="container">
+
+        <div class="intro-box">
+
+            <div class="big-heart">♥</div>
+
+            <p>
+                Some people spend their whole lives looking for
+                someone who loves them unconditionally.
+                <br><br>
+                <strong>
+                We were lucky enough to be born with that person.
+                </strong>
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- LETTER -->
+
+<section class="letter-section">
+
+    <div class="container">
+
+        <div class="title">
+
+            <span>From our hearts</span>
+
+            <h2>To Our Mom</h2>
+
+        </div>
+
+
+        <div class="letter">
+
+            <h3>Dear Mom,</h3>
+
+            <p>
+                Happy 50th Birthday to the most amazing Mom.
+            </p>
+
+            <p>
+                We don't always say it enough, but we want you to know
+                how incredibly much we appreciate you.
+            </p>
+
+            <p>
+                You have always been there for us.
+                No matter what we need, you are there to help.
+                No matter what happens, you support us.
+                And no matter what, you love us.
+            </p>
+
+            <p>
+                Your kindness is something we will never take for granted.
+                You have such a caring heart, and you are always willing
+                to help the people you love.
+            </p>
+
+            <p>
+                What makes your love so special is that it has never
+                depended on us being perfect. You have loved us through
+                our best days and our difficult days.
+                You have loved us when we made you proud,
+                and you have loved us when we probably tested your patience.
+            </p>
+
+            <p>
+                That unconditional love is one of the greatest gifts
+                you have ever given us.
+            </p>
+
+            <p>
+                We appreciate every sacrifice you have made,
+                every time you have helped us,
+                every piece of advice,
+                every hug,
+                every laugh,
+                every conversation,
+                and every little thing you do that sometimes goes unnoticed.
+            </p>
+
+            <p>
+                We love and adore you more than we could ever put into words.
+                We are incredibly grateful that we get to call you our Mom.
+            </p>
+
+            <p>
+                We hope your 50th birthday reminds you of just how special
+                you are to all of us.
+            </p>
+
+            <p>
+                You deserve all the happiness, love and beautiful moments
+                that this next chapter of your life has to offer.
+            </p>
+
+            <p>
+                Thank you for simply being you.
+            </p>
+
+            <div class="signature">
+                We love you endlessly. ❤️
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- 50 -->
+
+<section class="fifty">
+
+    <div class="container">
+
+        <div class="number">
+            50
+        </div>
+
+        <h2>Fifty Years of You</h2>
+
+        <p>
+            Fifty years of laughter.
+            Fifty years of love.
+            Fifty years of memories.
+            Fifty years of being there for the people you love.
+            Fifty years of being the wonderful woman that you are.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- WHY WE LOVE HER -->
+
+<section class="love-section">
+
+    <div class="container">
+
+        <div class="title">
+
+            <span>There are so many reasons</span>
+
+            <h2>Why We Love You</h2>
+
+            <p>
+                These are only a few of the things that make you
+                so incredibly special to us.
+            </p>
+
+        </div>
+
+
+        <div class="love-grid">
+
+            <div class="love-card">
+
+                <div class="icon">❤️</div>
+
+                <h3>Your Love</h3>
+
+                <p>
+                    Your love is unconditional.
+                    No matter what life brings,
+                    we always know that your love is there.
+                </p>
+
+            </div>
+
+
+            <div class="love-card">
+
+                <div class="icon">🤍</div>
+
+                <h3>Your Kindness</h3>
+
+                <p>
+                    You have such a kind heart.
+                    You are always willing to help
+                    and make someone's day a little better.
+                </p>
+
+            </div>
+
+
+            <div class="love-card">
+
+                <div class="icon">🌷</div>
+
+                <h3>Your Support</h3>
+
+                <p>
+                    You believe in us, encourage us
+                    and stand beside us.
+                    Knowing you're there means everything.
+                </p>
+
+            </div>
+
+
+            <div class="love-card">
+
+                <div class="icon">🫶</div>
+
+                <h3>Your Heart</h3>
+
+                <p>
+                    You care deeply about the people
+                    you love, and you give so much of
+                    yourself to your family.
+                </p>
+
+            </div>
+
+
+            <div class="love-card">
+
+                <div class="icon">✨</div>
+
+                <h3>Your Strength</h3>
+
+                <p>
+                    You have handled so much and
+                    continued to show up with love,
+                    courage and determination.
+                </p>
+
+            </div>
+
+
+            <div class="love-card">
+
+                <div class="icon">🥰</div>
+
+                <h3>Simply You</h3>
+
+                <p>
+                    We don't need a reason.
+                    We love you because you're our Mom.
+                    And we wouldn't change that for anything.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PHOTOS -->
+
+<section class="photos-section">
+
+    <div class="container">
+
+        <div class="title">
+
+            <span>Our memories</span>
+
+            <h2>A Life We Get to Share</h2>
+
+            <p>
+                Add your favourite family photographs here.
+                Every picture tells a little piece of your story.
+            </p>
+
+        </div>
+
+
+        <div class="photos">
+
+            <div class="photo">
+                <div class="photo-placeholder">
+                    <div>
+                        <span>Our Memories</span>
+                        Add Mom's favourite photo here
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo">
+                <div class="photo-placeholder">
+                    <div>
+                        <span>Family</span>
+                        Add a family photo here
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo">
+                <div class="photo-placeholder">
+                    <div>
+                        <span>Beautiful Moments</span>
+                        Add a special memory here
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo">
+                <div class="photo-placeholder">
+                    <div>
+                        <span>Good Times</span>
+                        Add a favourite picture here
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo">
+                <div class="photo-placeholder">
+                    <div>
+                        <span>Our Mom</span>
+                        Add a beautiful photo here
+                    </div>
+                </div>
+            </div>
+
+            <div class="photo">
+                <div class="photo-placeholder">
+                    <div>
+                        <span>50 Beautiful Years</span>
+                        Add another special photo here
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FAMILY MESSAGE -->
+
+<section class="family">
+
+    <div class="container">
+
+        <div class="family-box">
+
+            <div class="heart-line">
+                ♥ ♥ ♥
+            </div>
+
+            <h2>
+                You Are So Loved
+            </h2>
+
+            <p>
+                We hope you never forget how much you mean to us.
+                You have spent so much of your life taking care of
+                the people around you, helping us, supporting us
+                and making sure we are okay.
+            </p>
+
+            <p>
+                Today, we want you to stop for a moment and realise
+                that you are appreciated too.
+            </p>
+
+            <p>
+                You are loved.
+                You are cherished.
+                You are appreciated.
+                You are admired.
+                And you are incredibly important to us.
+            </p>
+
+            <div class="heart-line">
+                ♥ ♥ ♥
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FINAL -->
+
+<section class="final">
+
+    <div class="final-content">
+
+        <div class="final-small">
+            To our beautiful Mom
+        </div>
+
+        <h2>
+            Happy<br>
+            50th Birthday
+        </h2>
+
+        <p>
+            May the next chapter of your life bring you
+            as much happiness as you have brought to ours.
+            May you have countless reasons to smile,
+            many beautiful memories still to make,
+            and all the love you deserve.
+        </p>
+
+        <div class="final-love">
+            We love and adore you, Mom. ❤️
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    Made with <span>♥</span> for the most amazing Mom.
+
+    <br><br>
+
+    Happy 50th Birthday 🎂
+
+</footer>
+
+
+</body>
+  </html>
